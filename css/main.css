@@ -96,21 +96,6 @@ textarea {
    ========================================================================== */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -277,4 +262,25 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+/* -------------------
+JAIME
+------------------- */
+
+
+table.equalDevide tr td { width:25%; }
+
+#tdCiudadanos {
+    background-color: orange;
+}
+#tdPodemos {
+    background-color: purple;
+}
+#tdPP {
+    background-color: blue;
+}
+#tdPsoe {
+    background-color: red;
 }
