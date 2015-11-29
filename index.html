@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
@@ -14,6 +16,17 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
+    <script>
+        function voteUp(id)
+        {
+            document.getElementById(id).style.background="green";
+        }
+
+        function voteDown(id)
+        {
+            document.getElementById(id).style.background="red";
+        }
+    </script>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -23,14 +36,58 @@
 
         <h2>Descripción</h2>
 
+<!--
         <table class="equalDevide" cellpadding="0" cellspacing="0" width="100%" border="0">
            <tr>
               <td id="tdCiudadanos">Ciudadanos</td>
+                <table>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                </table>
               <td id="tdPodemos">Podemos</td>
               <td id="tdPsoe">Psoe</td>
               <td id="tdPP">PP</td>
            </tr>
         </table>
+    -->
+
+        <div id="container4">
+            <div id="container3">
+                <div id="container2">
+                    <div id="container1">
+                        <div id="col1">
+                            <table class="equalDevide" cellpadding="0" cellspacing="0" width="100%" border="0">
+
+                                <tr><td><h3>PODEMOS</h3></td><tr>
+
+                                <tr id="hola"class="propuesta">
+                                    <td class="textoPropuesta">Derogación del Real Decreto 900 / 2015, de 9 de octubre, y aprobación de una normativa que permita el desarrollo del autoconsumo eléctrico</td>
+                                    <td class="votos"><button onclick="voteUp('hola')">👍</button> <br> <br> <button onclick="voteDown('hola')">👎</button></span> </td>
+                                </tr>
+
+                                <tr class=".propuesta">
+                                    <td class="textoPropuesta">Puesta en marcha de fondos de inversión soberanos de carácter público</td>
+                                    <td class="votos">+
+                                        -</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div id="col2">
+                            b
+                        </div>
+                        <div id="col3">
+                            c
+                        </div>
+                        <div id="col4">
+                            d
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>

@@ -14,6 +14,13 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
+    background-color: #e3e4e5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
 }
 
 /*
@@ -270,7 +277,14 @@ JAIME
 ------------------- */
 
 
+
+/*
 table.equalDevide tr td { width:25%; }
+
+
+*/
+
+/*table.equalDevide tr td {width: 50%;}*/
 
 #tdCiudadanos {
     background-color: orange;
@@ -283,4 +297,76 @@ table.equalDevide tr td { width:25%; }
 }
 #tdPsoe {
     background-color: red;
+}
+
+#propuesta {
+    border-bottom: 1px solid black;
+}
+
+#textoPropuesta {
+    width: 95%;
+}
+#votos {
+    width: 5%
+}
+
+
+#container4 {
+    clear:left;
+    float:left;
+    width:100%;
+    overflow:hidden;
+    background:#0BB2FF; /* column 4 background colour */
+}
+#container3 {
+    clear:left;
+    float:left;
+    width:100%;
+    position:relative;
+    right:25%;
+    background:#FD4848; /* column 3 background colour */
+}
+#container2 {
+    clear:left;
+    float:left;
+    width:100%;
+    position:relative;
+    right:25%;
+    background:#F59F48; /* column 2 background colour */
+}
+#container1 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:25%;
+    background:#97668B; /* column 1 background colour */
+}
+
+#col1 {
+    float:left;
+    width:21%;
+    position:relative;
+    left:77%;
+    overflow:hidden;
+}
+#col2 {
+    float:left;
+    width:21%;
+    position:relative;
+    left:81%;
+    overflow:hidden;
+}
+#col3 {
+    float:left;
+    width:21%;
+    position:relative;
+    left:85%;
+    overflow:hidden;
+}
+#col4 {
+    float:left;
+    width:21%;
+    position:relative;
+    left:89%;
+    overflow:hidden;
 }
