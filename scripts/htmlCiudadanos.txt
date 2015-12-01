@@ -1,0 +1,977 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" class="notouch mc-overwrite-css no-js">
+				<head>
+					<meta http-equiv="content-type" content="text/html; charset=utf-8">
+					<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">										<link rel="stylesheet" href="/styles/style.php/drawers/lib.common.layout.scss?__v=147_0" type="text/css" charset="utf-8" /><link rel="stylesheet" href="/styles/reset.css?__v=147_0" type="text/css" charset="utf-8" /><link rel="stylesheet" href="/styles/fonts/fonts.css?__v=147_0" type="text/css" charset="utf-8" /><link rel="stylesheet" href="/vendor/bower_components/select2/select2.css?__v=147_0" type="text/css" charset="utf-8" /><link rel="stylesheet" href="/styles/style.php/drawers/basic.layout.scss?__v=147_0" type="text/css" charset="utf-8" /><link rel="stylesheet" href="/styles/style.php/drawers/corporate.layout.scss?__v=147_0" type="text/css" charset="utf-8" /><script type="text/javascript" src="/vendor/bower_components/modernizr/modernizr.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/jquery/dist/jquery.min.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/jquery.easing/js/jquery.easing.min.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/moment/min/moment.min.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/lodash-compat/lodash.min.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/moment/locale/es.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/select2/select2.min.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/select2/select2_locale_es.js?__v=147_0"></script><script type="text/javascript" src="/scripts/common/browser-detection.apply-class-to-html.js?__v=147_0"></script><script type="text/javascript" src="/scripts/common/core.js?__v=147_0"></script><script type="text/javascript" src="/scripts/plugins/custom/jquery.go-to.js?__v=147_0"></script><script type="text/javascript" src="/scripts/page.controllers/_page.controller.js?__v=147_0"></script><script type="text/javascript" src="/scripts/logic/phpjs.js?__v=147_0"></script><script type="text/javascript" src="/scripts/logic/utils.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/jquery-migrate/jquery-migrate.min.js?__v=147_0"></script><script type="text/javascript" src="/scripts/plugins/jquery.ba-bbq.min.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/jquery-placeholder/jquery.placeholder.js?__v=147_0"></script><script type="text/javascript" src="/scripts/common/jquery.placeholder.init.js?__v=147_0"></script><script type="text/javascript" src="/scripts/common/patch-unselectable-ie.js?__v=147_0"></script><script type="text/javascript" src="/vendor/bower_components/matchHeight/jquery.matchHeight-min.js?__v=147_0"></script><script type="text/javascript" src="/scripts/plugins/jquery.color-2.1.2.js?__v=147_0"></script><script type="text/javascript" src="/scripts/plugins/jquery.cookie.js?__v=147_0"></script><script type="text/javascript" src="/scripts/page.controllers/draw-basic-helper--header--draw-page-header.js?__v=147_0"></script><script type="text/javascript">
+				jQuery(document).ready(function() { moment.locale("es"); });
+			</script><!--[if (gte IE 6)&(lte IE 8)]>
+				<script type="text/javascript" src="/scripts/plugins/custom/selectivizr.js?__v=147_0"></script>
+			<![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Ciudadanos</title><script type="text/javascript">
+				jQuery(document).ready(function($) {
+					var $cookieBar = $('.basic--draw-message-bar-cookie-notice');
+					var $cookieCloseButton = $('.basic--draw-message-bar-cookie-notice--content > .buttons > .button');
+					var COOKIE_NAME = "SID_CS_SITE_COOKIE_NOTICE";
+					var COOKIE_PATH = "\/";
+					var COOKIE_LIFETIME = 365;
+					$cookieCloseButton.on( "click", function() {
+						$.cookie( COOKIE_NAME, true, { path:COOKIE_PATH, expires:COOKIE_LIFETIME });
+						$cookieBar.hide();
+					});
+					if( $.cookie(COOKIE_NAME)) $cookieBar.hide();
+				});
+			</script>			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$('.basic--draw-page-footer, .basic--draw-page-footer-padding').matchHeight(false);
+				});
+			</script><script type="text/javascript">
+				var Data = Data || {};
+				Data.agrupacionesMapResultadosUrl = "\/cerca-de-ti\/resultados";
+				Data.defaultCountryID = 11;
+			</script><script>
+							(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+							(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+							m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+							})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+							ga('create', 'UA-44942126-2', 'auto');
+							ga('send', 'pageview');
+						</script>			<script type="text/javascript">
+				var Data = Data || {};
+					Data.post = [];
+					Data.ajaxCoreActionUrl = "\/ajax\/core.action";
+			</script>
+					<link rel="shortcut icon" href="/images/favicon/favicon.ico?__v=147_0">
+			<link rel="icon" href="/images/favicon/favicon-32x32.png?__v=147_0" sizes="32x32" type="image/png">
+			<link rel="icon" href="/images/favicon/favicon-64x64.png?__v=147_0" sizes="64x64" type="image/png">
+					<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					var postData = Data.post;
+					var $langButtons = $( '.basic--draw-page-header--top-header > .lang > a' );
+					$langButtons.on('click',function(){
+						var $button = $(this);
+						if($button.hasClass('sel')) return;
+						$.postGo($(this).data('href'),postData);
+					});
+				});
+			</script>
+				<script type="text/javascript">
+				jQuery(document).ready(function($){
+					var $buttons = $('.corporate--propuestas-page-content--content .propuestas > .propuesta > .heading > .left > .content > .button').hover(
+						function(){
+							var $button = $(this);
+							var color = $button.closest('.propuesta').data('color');
+							$button.css({
+								'color' : 'white',
+								'background-color' : color,
+							});
+						},
+						function(){
+							var $button = $(this);
+							var color = $button.closest('.propuesta').data('color');
+							$button.css({
+								'color' : color,
+								'background-color' : 'transparent',
+							});
+						}
+					);
+					$('.corporate--propuestas-page-content--content').on('click','.propuestas > .propuesta.has-content > .heading > .left > .content > .button',function(){
+						var $button = $(this);
+						var $propuesta = $button.closest('.propuesta');
+						var $content = $propuesta.children('.content');
+						$button.toggleClass('active');
+						var unfold = $button.hasClass('active');
+						var animate = true; // not required, future..
+
+						$content.stop(true,false);
+						if(unfold) {
+							$content.css('overflow','hidden');
+							if(animate) {
+								Core.$slideDownAutoHeight($content,500,'easeInOutQuad',function(){
+									$content.css('overflow','visible');
+								});
+							} else {
+								$content.css('overflow','visible');
+							}
+						}
+						else
+						{
+							if(animate) {
+								Core.$slideUp($content,500,'easeInOutQuad');
+							} else {
+								$content.css({overflow:'hidden',height:0});
+							}
+						}
+					});
+
+					$('.corporate--propuestas-page-content--content').on('click','.propuestas > .propuesta >.content > .content > div > h3.header',function() {
+						var $self = $(this);
+						var $content = $self.next('div');
+						var isNotCollapse = $content.data('is-not-collapse');
+						// animation
+						$content.stop(true,false);
+						if(isNotCollapse) { Core.$slideUp($content, 200); $self.addClass('collapsed'); }
+						else { Core.$slideDownAutoHeight($content, 200); $self.removeClass('collapsed'); }
+						$content.data('is-not-collapse',!isNotCollapse);
+					});
+
+					// Hashtag match propuesta key
+					if ( window.location.hash ) {
+						var $propuestaToExpand = $('.corporate--propuestas-page-content--content .propuestas > .propuesta[data-propuesta-key="'+window.location.hash.slice(1)+'"]');
+						if($propuestaToExpand.size()) {
+							$('html,body').animate({scrollTop: $propuestaToExpand.offset().top - 60});
+							$('.heading > .left > .content > .button', $propuestaToExpand).click();
+						}
+					}
+				});
+			</script></head>
+				<body class=" app-corporate" ><div class="page-main-container">
+					<div class="basic--draw-page-header"><div class="page-content-fixed-width-centered" >
+			<div class="container">
+				<div class="basic--draw-page-header--top-header">
+					<div class="logo"><a href="/"><div class="basic--draw-img both-exists" style="width:260px; height:38px;"><img width="260" height="38" src="/images/sections/header-logo/_locale.es/logo-ciudadanos.png?__v=147_0" class="non-retina" ><img width="260" height="38" src="/images/sections/header-logo/_locale.es/logo-ciudadanos-2x.png?__v=147_0" class="retina" ></div></a></div>
+					<div class="pane">
+						<a class="co-button t1 button-zona-afiliados" href="https://ww3.ciudadanos-cs.org/afiliados/">zona afiliados</a>
+											</div>
+					<div class="lang">
+						<a href="javascript:void(0);" data-href="/programa-electoral?lg=es" class="sel">castellano</a><span> · </span><a href="javascript:void(0);" data-href="/programa-electoral?lg=ca" class="">català</a><span> · </span><a href="javascript:void(0);" data-href="/programa-electoral?lg=eu" class="">euskara</a><span> · </span><a href="javascript:void(0);" data-href="/programa-electoral?lg=gl" class="">galego</a><span> · </span><a href="javascript:void(0);" data-href="/programa-electoral?lg=va" class="">valencià</a>					</div>
+				</div>			</div>
+		</div>			<div class="basic--draw-page-header--nav-menu-fill-space-on-fixed"></div>
+			<div class="basic--draw-page-header--nav-menu"><div class="page-content-fixed-width-centered" >
+			<div class="container">
+				<div class="basic--draw-page-header--nav-menu-content"><div><nav><ul><li><div class="menu-item  ">
+					<a  href="javascript:void(0);" >somos ciudadanos</a>
+											<div class="columns-wrapper">
+							<div class="container">								<ul>
+																	<li><div class="menu-item  ">
+					<a  href="/que-es-ciudadanos" >¿Qué es Ciudadanos?</a>
+									</div></li>
+																	<li><div class="menu-item  ">
+					<a  href="/equipo" >Equipo</a>
+									</div></li>
+																	<li><div class="menu-item  ">
+					<a  href="/transparencia" >Transparencia</a>
+									</div></li>
+																	<li><div class="menu-item  ">
+					<a  href="/cerca-de-ti" >Cerca de ti</a>
+									</div></li>
+																</ul>
+															<ul>
+																	<li><div class="menu-item  ">
+					<a  href="/europa" >C's Europa</a>
+									</div></li>
+																	<li><div class="menu-item  ">
+					<a  href="/organizacion" >Organización</a>
+									</div></li>
+																	<li><div class="menu-item  ">
+					<a  href="/origenes" >Orígenes</a>
+									</div></li>
+																	<li><div class="menu-item  ">
+					<a  href="/estatutos" >Estatutos</a>
+									</div></li>
+																</ul>
+														</div>
+						</div>
+									</div></li><li><div class="menu-item  no-childs">
+					<a  href="/programa-electoral" >Nuestro proyecto</a>
+									</div></li><li><div class="menu-item  ">
+					<a  href="javascript:void(0);" >actualidad</a>
+												<ul>
+															<li><div class="menu-item  ">
+					<a  href="/prensa" >Notas de Prensa</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/noticias" >C's en los Medios</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/opinion" >Opinión</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/agenda" >Agenda</a>
+									</div></li>
+														</ul>				</div></li><li><div class="menu-item  ">
+					<a  href="/participa" >Participa</a>
+												<ul>
+															<li><div class="menu-item  ">
+					<a  href="/afiliate" >Afíliate</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/hazte-simpatizante" >Hazte Simpatizante</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/red-ciudadana" >Red Ciudadana</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/cerca-de-ti" >Encuentra tu agrupación</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/donaciones" >Haz una donación</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a  href="/cs-te-escucha" >C's te escucha</a>
+												<ul>
+															<li><div class="menu-item  ">
+					<a  href="/cs-te-escucha" >Café con Albert</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a target="_blank" href="javascript:void(0);" >Parlamento Abierto</a>
+									</div></li>
+															<li><div class="menu-item  ">
+					<a target="_blank" href="https://twitter.com/ciudadanoscs" >Encuentro Twittero</a>
+									</div></li>
+														</ul>				</div></li>
+														</ul>				</div></li><li><div class="menu-item  no-childs">
+					<a  href="/donaciones" >Colabora</a>
+									</div></li><li></li><li></li></ul></nav>						<div class="search"></div>
+					</div></div>			</div>
+		</div>			</div>		</div>
+		<div class="basic--draw-page--mobile--nav-menu"><div class="page-content-fixed-width-centered" >
+			<div class="container">
+								<div class="basic--draw-page--mobile--nav-menu-content">		<nav>
+			<ul><li><div class="menu-item ">
+				<a  href="javascript:void(0);" >somos ciudadanos</a>						<ul>								<li><div class="menu-item ">
+				<a  href="/que-es-ciudadanos" >¿Qué es Ciudadanos?</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/equipo" >Equipo</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/transparencia" >Transparencia</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/cerca-de-ti" >Cerca de ti</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/europa" >C's Europa</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/organizacion" >Organización</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/origenes" >Orígenes</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/estatutos" >Estatutos</a>			</div></li>						</ul>			</div></li><li><div class="menu-item ">
+				<a  href="/programa-electoral" >Nuestro proyecto</a>			</div></li><li><div class="menu-item ">
+				<a  href="javascript:void(0);" >actualidad</a>						<ul>								<li><div class="menu-item ">
+				<a  href="/prensa" >Notas de Prensa</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/noticias" >C's en los Medios</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/opinion" >Opinión</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/agenda" >Agenda</a>			</div></li>						</ul>			</div></li><li><div class="menu-item ">
+				<a  href="/participa" >Participa</a>			</div></li><li><div class="menu-item ">
+				<a  href="/donaciones" >Colabora</a>			</div></li><li><div class="menu-item ">
+				<a  href="https://ww3.ciudadanos-cs.org/afiliados/" >zona afiliados</a>			</div></li><li><div class="menu-item lang">
+				<a  href="javascript:void(0);" >selecciona otro idioma</a>						<ul>								<li><div class="menu-item ">
+				<a  href="/programa-electoral?lg=es" >castellano</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/programa-electoral?lg=ca" >català</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/programa-electoral?lg=eu" >euskara</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/programa-electoral?lg=gl" >galego</a>			</div></li>								<li><div class="menu-item ">
+				<a  href="/programa-electoral?lg=va" >valencià</a>			</div></li>						</ul>			</div></li></ul>
+		</nav>				</div>			</div>
+		</div>		</div><div class="basic--draw-message-bar-cookie-notice"><div class="page-content-fixed-width-centered" >
+			<div class="container">
+				<div class="basic--draw-message-bar-cookie-notice--content">
+					<div class="notice">Utilizamos cookies propias y de terceros para realizar análisis de uso y de medición de nuestra web para mejorar nuestros servicios. Si continua navegando, consideramos que acepta su uso.<a class="button" href="/legal/politica-de-cookies">Más información</a></div>
+					<div class="buttons"><a href="javascript:void(0);" class="co-button t2 button">Aceptar</a></div>
+				</div>			</div>
+		</div></div><div class="corporate--propuestas-page-content"><div class="page-content-fixed-width-centered" >
+			<div class="container">
+				<div class="corporate--propuestas-page-content--content">
+					<div class="header">El nuevo proyecto común para España</div><div class="propuestas"><div class="propuesta has-content" data-propuesta-key="regeneracion-democratica" style="border-color:#F9BB3C; color: #F9BB3C" data-color="#F9BB3C">
+							<div class="heading">
+								<div class="left"><a name="regeneracion-democratica"></a>
+									<div class="pre-titulo" style="background: #F9BB3C;" >Parte I</div>									<div class="content  "  >
+										<div class="titulo">Regeneración democrática e institucional</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#F9BB3C; color: #F9BB3C"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Nueva sección de derechos sociales en la Constitución</h3>
+			<div class="collapsable">Incluir en la Constitución el derecho a la salud, a los servicios sociales, a la vivienda y a la atención a las personas en situación de dependencia. Su desarrollo deberá incluir siempre la garantía de dotación presupuestaria.</div>
+			<h3 class="header">Políticos sin privilegios</h3>
+			<div class="collapsable">Suprimir los privilegios para los representantes públicos: aforamientos, suplicatorios o indultos por corrupción política.</div>
+			<h3 class="header">Despolitización de la Justicia</h3>
+			<div class="collapsable">Suprimir el Consejo General del Poder Judicial, y asignar sus funciones al Presidente del Tribunal Supremo, asistido por dos Adjuntos. Será elegido por el Congreso de los diputados con el voto a favor de las dos terceras partes y  entre magistrados del Tribunal Supremo con, al menos, 20 años de ejercicio en la carrera judicial y que no hubieran tenido vinculación con ningún partido político. Suprimir la posibilidad de que los parlamentos autonómicos propongan magistrados de los Tribunales Superiores de Justicia.</div>
+			<h3 class="header">Organización territorial del Estado: leal, eficaz, ciudadana</h3>
+			<div class="collapsable">Clarificar el modelo autonómico, elaborando un listado de competencias exclusivas del Estado, competencias compartidas, y competencias de las Comunidades Autónomas. Enumerar las 17 Comunidades y las dos ciudades autónomas, para fijar el mapa autonómico de manera definitiva. Esto conllevará la supresión la disposición transitoria cuarta que contempla la posibilidad de incorporación de Navarra al País Vasco.</div>
+			<h3 class="header">Una cartera de servicios común en toda España.</h3>
+			<div class="collapsable">Establecer Una financiación territorial equitativa, transparente y eficaz mediante la elaboración de una cartera de servicios cuya garantía estaría constitucionalmente respaldada por la financiación del Estado. </div>
+			<h3 class="header">Una administración más eficiente</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Suprimir las Diputaciones provinciales.</li>
+					<li>Suprimir el Senado y crear el Consejo de Presidentes de las Comunidades Autónomas como cámara de verdadera representación territorial.</li>
+					<li>Fusionar municipios para que puedan prestar servicios de forma más eficaz y sostenible.</li>
+				</ul>
+			</div>
+			<h3 class="header">Una nueva ley electoral</h3>
+			<div class="collapsable">Impulsar una reforma electoral inspirada en el modelo alemán. La elección de los diputados se hará simultáneamente entre escaños unipersonales y listas proporcionales desbloqueadas, disponiendo en consecuencia cada elector de dos votos.</div>
+			<h3 class="header">Europa y más Europa</h3>
+			<div class="collapsable">Reconocimiento constitucional de la pertenencia a la Unión Europea y de la primacía del derecho europeo en sus áreas competenciales. Se articulará un procedimiento que permita la transferencia de facultades y derechos soberanos a la Unión, sin más límite que el respeto a los principios fundamentales del Estado social y democrático de Derecho consagrado en el Título Preliminar de nuestra Constitución.</div>
+			<h3 class="header">Reconciliación entre los españoles</h3>
+			<div class="collapsable">Facilitar desde todas las Administraciones Públicas, a los descendientes directos de las víctimas que así lo soliciten, las actividades de indagación, localización e identificación de las personas desaparecidas durante la Guerra Civil o la represión durante la Dictadura. Suprimir la toponimia franquista y retirar escudos, insignias, placas y otros objetos o menciones que exalten la violencia y la represión durante la Guerra Civil y de la Dictadura.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="economia-empleo" style="border-color:#31BDA5; color: #31BDA5" data-color="#31BDA5">
+							<div class="heading">
+								<div class="left"><a name="economia-empleo"></a>
+									<div class="pre-titulo" style="background: #31BDA5;" >Parte II</div>									<div class="content  "  >
+										<div class="titulo">Economía y empleo</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#31BDA5; color: #31BDA5"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Contrato estable de igualdad de oportunidades</h3>
+			<div class="collapsable">Las nuevas contrataciones se harán con un contrato indefinido con indemnizaciones crecientes. Se constituirá un Seguro contra el Despido mediante aportaciones empresariales a cada trabajador de un 1% de su salario. Se podrá disponer de él en caso de despido o en la jubilación. Se establecerá una bonificación en las cotizaciones de la seguridad social de las empresas que despidan menos.</div>
+			<h3 class="header">Complemento Salarial Anual Garantizado</h3>
+			<div class="collapsable">Tendrán derecho a percibirlo aquellos que hayan obtenido rentas salariales sin llegar a alcanzar una cuantía mínima anual. Los objetivos son luchar contra la desigualdad y fomentar la remuneración digna del empleo a la vez que el afloramiento de economía sumergida.</div>
+			<h3 class="header">Una Reforma fiscal a favor de la clase media</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Un IRPF progresivo que baje a todos los contribuyentes al menos un 3%, lo que beneficiará directamente a las clases medias y trabajadoras.</li>
+					<li>Un Impuesto de Sociedades con menos beneficios fiscales con un tipo único del 20% (más cercano a la media de la OCDE).</li>
+					<li>Un IVA con dos tipos: uno general que se reduce de 21% a 18%, y otro reducido de 7%. Sanidad, educación y otros exentos lo seguirían estando.</li>
+				</ul>
+			</div>
+			<h3 class="header">Impulso para los autónomos</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Con ganancias por debajo del SMI mensual, los autónomos se darán de alta sin pagar cuota.</li>
+					<li>Con ganancias por encima del SMI mensual, los autónomos pagarán en función de sus beneficios.</li>
+				</ul>
+			</div>
+			<h3 class="header">Programa contra el Paro de larga duración</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Introducción de cheques de formación para poner el dinero en manos de los trabajadores, y que los proveedores de educación compitan por ellos, en vez de ponerlo en manos de los sindicatos y organizaciones de empresas.</li>
+					<li>Llevar un servicio de búsqueda de empleo y orientación individualizada más eficiente.</li>
+				</ul>
+			</div>
+			<h3 class="header">Lucha contra el fraude</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Simplificar el régimen de contabilidad de las pequeñas y medianas empresas.</li>
+					<li>Devolver el control fiscal de las SICAV a la Inspección de Hacienda.</li>
+					<li>Endurecer las penas de los delitos más graves, los cometidos utilizando paraísos fiscales, testaferros u organizaciones para delinquir para que la condena implique penas efectivas de prisión.</li>
+					<li>Devolver su independencia, profesionalidad, y calidad a la agencia tributaria, incrementando sustancialmente sus recursos y duplicando el número de funcionarios (inspectores, técnicos y personal de apoyo).</li>
+				</ul>
+			</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="pacto-educacion" style="border-color:#DF4E5E; color: #DF4E5E" data-color="#DF4E5E">
+							<div class="heading">
+								<div class="left"><a name="pacto-educacion"></a>
+									<div class="pre-titulo" style="background: #DF4E5E;" >Parte III</div>									<div class="content  "  >
+										<div class="titulo">Un pacto nacional por la Educación</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#DF4E5E; color: #DF4E5E"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Gratuidad de la enseñanza</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Establecer, donde no exista, un sistema para compartir libros de texto que evite que los padres hagan frente a este gasto.</li>
+					<li>Poner freno de forma decidida, usando todos los instrumentos legales posibles, a la introducción de cualquier tipo de tasa, tarifa o gasto por parte de los colegios públicos o concertados.</li>
+				</ul>
+			</div>
+			<h3 class="header">Independencia de los centros</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Dotar progresivamente de mayor autonomía, tanto curricular, como organizativa a los centros educativos.</li>
+					<li>Es necesario revisar en profundidad el actual sistema de repeticiones.</li>
+					<li>Rendición de cuentas vía pruebas estandarizadas sobre un amplio conjunto de competencias cognitivas que permitan comparar el desempeño de los centros educativos (públicos, concertados y privados) de todo el país.</li>
+				</ul>
+			</div>
+			<h3 class="header">Un modelo plurilingüe en la escuela pública</h3>
+			<div class="collapsable">Promover que en todas las escuelas públicas se eduque a los niños en dos idiomas (español e inglés) o en tres (lengua autonómica, español e inglés) en las comunidades donde existan lenguas cooficiales.</div>
+			<h3 class="header">Un MIR docente: concursos de provisión y formación del profesorado</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Revisión de los sistemas de acceso a la formación (magisterio y máster de formación del profesorado).</li>
+					<li>Formación inicial del profesorado con un componente significativo de residencia remunerada.</li>
+					<li>Es necesario mejorar las condiciones de trabajo de los docentes implantando un modelo normalizado y generalizado de profesores de apoyo que cooperen cotidianamente con ellos en el aula.</li>
+					<li>Los centros deben identificar a los profesores y maestros con mayor impacto y aprender de ellos. Esta política podría conseguir máximo impacto con un coste no excesivamente elevado.</li>
+					<li>De cara a premiar a los docentes que lo hagan mejor, sería conveniente una evaluación periódica y transparente de sus resultados que contemplara consecuencias positivas en la práctica.</li>
+				</ul>
+			</div>
+			<h3 class="header">Reforma universitaria</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Estudio y coordinación nacional de la oferta universitaria y racionalización del Sistema Universitario (centros, estudios y títulos); mayor especialización de las universidades.</li>
+					<li>Estimular la cooperación entre universidades para crear redes de atracción de estudiantes y académicos internacionales y fomentar la movilidad.</li>
+					<li>La financiación adecuada basada en la consecución de objetivos (I) – (III) es un complemento necesario para que el cambio de mentalidad se materialice y no degenere, para que la autonomía universitaria produzca excelencia universitaria.</li>
+				</ul>
+			</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="politica-cientifica" style="border-color:#f99033; color: #f99033" data-color="#f99033">
+							<div class="heading">
+								<div class="left"><a name="politica-cientifica"></a>
+									<div class="pre-titulo" style="background: #f99033;" >Parte IV</div>									<div class="content  "  >
+										<div class="titulo">Innovación y Política Científica</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#f99033; color: #f99033"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Promover la cultura científica en España</h3>
+			<div class="collapsable">Reforzar la importancia de la ciencia para la sociedad. Desarrollar una educación (desde la enseñanza básica al posgrado) orientada al conocimiento y comprensión del método científico.</div>
+			<h3 class="header">Aumento de la inversión en I+D</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Incrementar significativamente, en los Presupuestos Generales del Estado y de las CC.AA., de la inversión en I+D hasta llevarla a 3% del PIB anual.</li>
+					<li>Desarrollo de una Ley del Mecenazgo Científico, al uso en otros países occidentales, que reactive la filantropía y la inversión privada en I+D, mediante la obtención de importantes ventajas fiscales.</li>
+				</ul>
+			</div>
+			<h3 class="header">Desarrollo de Centros de Investigación de Excelencia</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Acreditados por una convocatoria específica de ámbito estatal y en cualquier caso no se regirán por un sistema de RR.HH de tipo funcionarial.</li>
+					<li>Tendrán con obligatoriedad de presentar un plan racional de autofinanciación progresiva, con el objetivo de incentivar al máximo la financiación privada, con planes estratégicos en los que se defina claramente el porcentaje de financiación privada al que se aspira en un período máximo de 10 años. Serán dotados de forma sostenible (hasta que lleguen al 50% de su autofinanciación) por inversión pública.</li>
+				</ul>
+			</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="sistema-sanitario" style="border-color:#049abe; color: #049abe" data-color="#049abe">
+							<div class="heading">
+								<div class="left"><a name="sistema-sanitario"></a>
+									<div class="pre-titulo" style="background: #049abe;" >Parte V</div>									<div class="content  "  >
+										<div class="titulo">Sistema Sanitario</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#049abe; color: #049abe"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Fortalecimiento del Sistema Nacional de Salud</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Garantizar una sanidad pública, universal, gratuita y de calidad.</li>
+					<li>Modificar el sistema de financiación para que sea homogéneo, y haya equidad en las prestaciones de servicios sanitarios que se ofrecen en cada Comunidad Autónoma.</li>
+					<li>Favorecer la libre elección de los ciudadanos, que podrán escoger los centros, servicios y profesionales sanitarios.</li>
+					<li>Garantizar un sistema financiado por impuestos exclusivamente, sin copagos que impongan barreras al acceso a los servicios sanitarios por razones económicas.</li>
+					<li>Despolitizar la gestión sanitaria, mediante el nombramiento de directivos y gestores sanitarios profesionales, elegidos por sus conocimientos y experiencia, no por su afinidad política, en procedimiento público, abierto y transparente.</li>
+					<li>Priorizar los pagos a los proveedores sanitarios, para evitar situaciones de desabastecimiento por incumplimientos en obligaciones de la administración.</li>
+				</ul>
+			</div>
+			<h3 class="header">Regulación de la muerte digna</h3>
+			<div class="collapsable">Defendemos la posibilidad de rechazar o interrumpir un tratamiento de soporte vital; el derecho a recibir cuidados paliativos dirigidos a evitar el dolor, aunque acorten la vida incluyendo la sedación terminal cuando el dolor no se pueda controlar y la facultad de dejar por escrito anticipadamente, mediante instrucciones anticipadas o testamento vital,   la designación de la personas que nos representará y nuestra voluntad para el caso de que no podamos adoptar ya la decisión por nosotros mismos.</div>
+			<h3 class="header">Regulación de la maternidad subrogada</h3>
+			<div class="collapsable">Regular la posibilidad de la gestación subrogada, con el consentimiento expreso de las partes implicadas y con plenas garantías jurídicas, a través de un contrato de gestación entre la gestante sustituta y los padres intencionales, que garantice los derechos de las partes y donde la filiación del neonato sea inequívoca. Si tal contrato contemplara una compensación económica, ésta deberá ser de una cuantía que se ajuste a los gatos razonables del proceso.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="politicas-sociales" style="border-color:#F9BB3C; color: #F9BB3C" data-color="#F9BB3C">
+							<div class="heading">
+								<div class="left"><a name="politicas-sociales"></a>
+									<div class="pre-titulo" style="background: #F9BB3C;" >Parte VI</div>									<div class="content  "  >
+										<div class="titulo">Políticas sociales</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#F9BB3C; color: #F9BB3C"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Derecho a la Vivienda</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Beneficiar a las personas en especiales circunstancias de emergencia social con la expropiación forzosa a la entidad financiera del uso de la vivienda durante un plazo máximo de tres años, a contar desde la fecha del lanzamiento acordado por el órgano competente.</li>
+					<li>Proteger a los  a los niños y las familias frente a desahucios y desalojos. Favorecer la reestructuración de la deuda hipotecaria de las familias, con especial prioridad las numerosas, monoparentales y con personas con discapacidad.</li>
+				</ul>
+			</div>
+			<h3 class="header">Pensiones</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Garantizar pensiones adecuadas y periódicamente actualizadas dentro de un sistema moderno y sostenible. La adaptación del sistema de pensiones al nuevo escenario demográfico y socioeconómico debe garantizar pensiones económicamente adecuadas.</li>
+					<li>El sistema debe ser transparente, en el que los individuos sepan en todo momento la magnitud de la pensión con la que pueden contar en el momento de su jubilación y que permita a cada persona decidir libremente a qué edad jubilarse y qué pensión le corresponde a tal edad.</li>
+				</ul>
+			</div>
+			<h3 class="header">Política migratoria común europea</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Promover una política común europea para la regulación de los flujos migratorios internacionales fundamentada en el respeto de la Convención Europea de Derechos Humanos, la protección de las fronteras exteriores, el principio de solidaridad y la libre circulación de los ciudadanos europeos y residentes permanentes en el seno de la Unión Europea.</li>
+					<li>Reformar la ley de extranjería para evitar las expulsiones “en caliente” que impidan el derecho de asilo. Se reformará el actual examen de conocimientos constitucionales y socioculturales para el acceso a la nacionalidad española. Se reformará la organización y funcionamiento de los centros de internamiento de extranjeros para garantizar los derechos fundamentales de los internos y agilizar la tramitación administrativa que resuelva su estatus en España.</li>
+				</ul>
+			</div>
+			<h3 class="header">Dependencia</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Crear un Plan Nacional de Dependencia siendo éste el pilar básico de la política nacional del partido en esta área, que desarrolle las medidas que sean necesarias para que las personas dependientes, así como los trabajadores del sector.</li>
+					<li>Estableceremos una reducción drástica de los plazos de acceso, simplificando y agilizando el proceso de obtención las prestaciones por dependencia.</li>
+				</ul>
+			</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="igualdad-conciliacion" style="border-color:#31BDA5; color: #31BDA5" data-color="#31BDA5">
+							<div class="heading">
+								<div class="left"><a name="igualdad-conciliacion"></a>
+									<div class="pre-titulo" style="background: #31BDA5;" >Parte VII</div>									<div class="content  "  >
+										<div class="titulo">Políticas de igualdad y de conciliación personal y laboral</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#31BDA5; color: #31BDA5"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Un Pacto Nacional por la Racionalización de Horarios y la Conciliación Laboral.</h3>
+			<div class="collapsable">Generalizar una jornada laboral más compacta y flexible que, junto a la adopción de medidas de flexibilidad laboral, permita conciliar mejor el tiempo destinado al trabajo y el destinado a usos familiares o personales.</div>
+			<h3 class="header">Nuevo esquema de baja por maternidad y paternidad</h3>
+			<div class="collapsable">Igualar la baja por paternidad a la de maternidad, para llevarla a un total de 26 semanas: 8 reservadas para cada progenitor, intransferibles; y las 10 restantes compartida.</div>
+			<h3 class="header">Promoción del servicios de educación inicial</h3>
+			<div class="collapsable">En el marco del Complemento Salarial que C’s ha propuesto se añadirá un crédito fiscal adicional por cada niño de entre 0 y 3 años, para guarderías. Incentivar a las empresas a ofrecer estos servicios en las sedes, o a llegar a acuerdos con centros de educación inicial.</div>
+			<h3 class="header">Igualdad y lucha frente a la violencia contra las mujeres y la violencia intrafamiliar</h3>
+			<div class="collapsable">Elevaremos a la categoría de política de Estado la lucha frente la violencia contra las mujeres y la violencia intrafamiliar.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="administracion" style="border-color:#DF4E5E; color: #DF4E5E" data-color="#DF4E5E">
+							<div class="heading">
+								<div class="left"><a name="administracion"></a>
+									<div class="pre-titulo" style="background: #DF4E5E;" >Parte VIII</div>									<div class="content  "  >
+										<div class="titulo">La Administración al servicio del buen gobierno</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#DF4E5E; color: #DF4E5E"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Protección a los denunciantes de casos de corrupción</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Tipificar expresamente como delito las conductas de acoso o mobbing que se lleven a cabo en el empleo público (o privado) contra una persona que hubiera denunciado un caso de corrupción relacionado con su trabajo.</li>
+					<li>Impedir la utilización de fondos públicos por parte del gestor público para realizar actuaciones contra el denunciante de la corrupción, particularmente en los procedimientos judiciales.</li>
+					<li>Conceder a los denunciantes de delitos de corrupción la condición de testigos protegidos si estos así lo solicitan.</li>
+				</ul>
+			</div>
+			<h3 class="header">Imputados fuera de las listas electorales</h3>
+			<div class="collapsable">Las personas que hayan sido imputadas judicialmente por delitos relacionados con la corrupción no podrán presentarse en listas electorales ni ocupar cargos públicos mientras dure esta situación.</div>
+			<h3 class="header">Los partidos responderán por la corrupción de sus cargos públicos</h3>
+			<div class="collapsable">Reactivar los mecanismos para exigir responsabilidad patrimonial subsidiaria a los responsables de haber causado daños y perjuicios a los intereses generales.</div>
+			<h3 class="header">Supresión de la cláusula suelo</h3>
+			<div class="collapsable">Eliminar la cláusula suelo en los contratos celebrados con consumidores incluyendo la devolución por parte de las entidades de todas las cantidades pagadas de más que correspondan por aplicación de la misma.</div>
+			<h3 class="header">Mejorar el funcionamiento de los partidos políticos</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Sistema de primarias para la elección de los candidatos que garantice la igualdad entre los mismos, sin excesivo número de avales u otras trabas orgánicas.</li>
+					<li>Auditorías obligatorias externas con auditor elegido de forma aleatoria similares a las que existen para otras entidades y organismos públicos o privados que perciben una parte importante de sus ingresos de los fondos públicos.</li>
+					<li>Prohibición de donaciones por parte de personas físicas o jurídicas que hayan tenido,  tengan o puedan tener en el corto plazo relaciones económicas con la Administración.</li>
+					<li>Prohibición de donaciones a las Fundaciones u otras entidades ligadas a los partidos, que deben de estar en todo caso sometidas a los mismos controles que los partidos</li>
+				</ul>
+			</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="justicia" style="border-color:#f99033; color: #f99033" data-color="#f99033">
+							<div class="heading">
+								<div class="left"><a name="justicia"></a>
+									<div class="pre-titulo" style="background: #f99033;" >Parte IX</div>									<div class="content  "  >
+										<div class="titulo">Justicia</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#f99033; color: #f99033"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Más recursos materiales y humanos para la Justicia</h3>
+			<div class="collapsable">
+				<ul>
+					<li>Promover en la administración judicial la digitalización de los archivos y en la que cualquier ciudadano o empresa pueda presentar una demanda por vía telemática.</li>
+					<li>Poner en marcha mecanismos de refuerzo inmediato en causas complejas. Estas medidas de apoyo deben adoptarse con rapidez, en cuestión de días, y no de meses, como ocurre en la actualidad, para facilitar al Juez su trabajo desde el principio en asuntos complejos.</li>
+				</ul>
+			</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="cultura-ciudadania" style="border-color:#049abe; color: #049abe" data-color="#049abe">
+							<div class="heading">
+								<div class="left"><a name="cultura-ciudadania"></a>
+									<div class="pre-titulo" style="background: #049abe;" >Parte X</div>									<div class="content  "  >
+										<div class="titulo">Cultura y Ciudadanía</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#049abe; color: #049abe"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Fomento de la cultura desde la escuela</h3>
+			<div class="collapsable">Activar un plan de fomento de la lectura en ESO y BAC. Creación de un Premio nacional de Fomento de la Lectura en centros educativos. Apostar por la formación de públicos desde la escuela, con la implantación en el currículum de asignaturas relacionadas con las artes escénicas.</div>
+			<h3 class="header">Fomentar la industria audiovisual</h3>
+			<div class="collapsable">Apoyar las industrias audiovisuales, desde el cine a la animación, los efectos audiovisuales y el videojuego.</div>
+			<h3 class="header">Consolidar la protección de la Propiedad Intelectual</h3>
+			<div class="collapsable">Simplificar y dinamizar el sistema normativo sobre propiedad intelectual con el objeto de proteger al creador y las industrias culturales. Trabajar desde la escuela en la defensa de la propiedad intelectual y la concienciación en el respeto a los derechos de autor.</div>
+			<h3 class="header">Protección del patrimonio</h3>
+			<div class="collapsable">Promover una nueva Ley del Patrimonio Histórico para la protección efectiva de bienes materiales e inmateriales.</div>
+			<h3 class="header">Fortalecimiento del Instituto Cervantes</h3>
+			<div class="collapsable">Fortalecer el Instituto Cervantes y dotarlo de verdadera independencia para convertirlo en la puerta de entrada del español en el mundo.</div>
+			<h3 class="header">Protección a los creadores</h3>
+			<div class="collapsable">Promover un Estatuto del Artista y el Creador para brindarles mayor protección social y estabilidad económica.</div>
+			<h3 class="header">Nueva ley de mecenazgo</h3>
+			<div class="collapsable">Crear la ley de mecenazgo para permitir a la sociedad civil participar en el sostenimiento de distintos proyectos culturales.</div>
+			<h3 class="header">Una RTVE independiente y de calidad</h3>
+			<div class="collapsable">Impulsar un nuevo modelo de RTVE que la convierta en un medio de servicio público independiente, de calidad y despolitizado, con una gestión transparente. Fijar una cuota de contenidos culturales en informativos y programas.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="deporte" style="border-color:#F9BB3C; color: #F9BB3C" data-color="#F9BB3C">
+							<div class="heading">
+								<div class="left"><a name="deporte"></a>
+									<div class="pre-titulo" style="background: #F9BB3C;" >Parte XI</div>									<div class="content  "  >
+										<div class="titulo">Deporte</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#F9BB3C; color: #F9BB3C"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Promoción del Deporte para la salud </h3>
+			<div class="collapsable">Desarrollar un Plan Integral de Promoción Deportiva para incentivar la práctica de la actividad física en todos los ámbitos de la sociedad, y lograr un estilo de vida activo y saludable.</div>
+			<h3 class="header">Apoyo al atleta de alta competencia</h3>
+			<div class="collapsable">Crear el Departamento de Apoyo al Deportista, con el objetivo de brindar apoyo económico, educativo, jurídico y personal a los atletas de alto nivel.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="politica-internacional" style="border-color:#31BDA5; color: #31BDA5" data-color="#31BDA5">
+							<div class="heading">
+								<div class="left"><a name="politica-internacional"></a>
+									<div class="pre-titulo" style="background: #31BDA5;" >Parte XII</div>									<div class="content  "  >
+										<div class="titulo">Política Internacional</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#31BDA5; color: #31BDA5"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Una carrera diplomática más profesional</h3>
+			<div class="collapsable">Reformar el sistema de Acceso a la Carrera Diplomática, promoviendo la transparencia y la meritocracia. Someter a la Comisión de Asuntos Exteriores del Congreso la designación de embajadores.</div>
+			<h3 class="header">Consolidar la financiación para Cooperación y Desarrollo</h3>
+			<div class="collapsable">Impulsar un Pacto de Estado sobre Cooperación al Desarrollo que asegure la estabilidad y la eficiencia de los recursos asignados cada año, hasta alcanzar un 0,7% del PIB.</div>
+			<h3 class="header">Participación política de los españoles en el exterior</h3>
+			<div class="collapsable">Mejorar el proceso de voto por correo de los españoles que residen en el exterior, con la creación de un sistema de voto electrónico que asegure una mayor participación.</div>
+			<h3 class="header">Política de Defensa Europea</h3>
+			<div class="collapsable">Apoyar activamente las iniciativas para concretar una verdadera política de defensa común, integrada y coherente.</div>
+			<h3 class="header">Política Fiscal Europea</h3>
+			<div class="collapsable">Promover el aumento de la coordinación fiscal y macroeconómica en el seno del Eurogrupo.</div>
+			<h3 class="header">Mercado Laboral Europeo</h3>
+			<div class="collapsable">Impulsar un auténtico mercado laboral único europeo, que favorezca los empleos de calidad y la movilidad de trabajadores y emprendedores.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="infraestructuras" style="border-color:#DF4E5E; color: #DF4E5E" data-color="#DF4E5E">
+							<div class="heading">
+								<div class="left"><a name="infraestructuras"></a>
+									<div class="pre-titulo" style="background: #DF4E5E;" >Parte XIII</div>									<div class="content  "  >
+										<div class="titulo">Infraestructuras</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#DF4E5E; color: #DF4E5E"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Gran Pacto Nacional por las Infraestructuras</h3>
+			<div class="collapsable">Impulsar un Gran Pacto por las Infraestructuras para impulsar cuatro Planes Nacionales de Desarrollo Estratégico en áreas esenciales: Transportes, Dotaciones Hidráulicas,  Redes de Producción y Transmisión de Energía y Redes de Telecomunicaciones.</div>
+			<h3 class="header">Infraestructuras prioritarias</h3>
+			<div class="collapsable">Promover la construcción de infraestructuras prioritarias como el Corredor Mediterráneo, el Corredor Atlántico y las Autopistas del Mar.</div>
+			<h3 class="header">Vivienda Social</h3>
+			<div class="collapsable">Impulsar el desarrollo legal del Derecho Social a la Vivienda, para proteger a las familias de malas prácticas bancarias, y crear un Plan Nacional de Desarrollo de Vivienda Social.</div>
+			<h3 class="header">Mercado Inmobiliario</h3>
+			<div class="collapsable">Crear un Observatorio del Mercado de la Vivienda y el Suelo para generar estudios y métricas sobre variables que afecten directamente al mercado inmobiliario.</div>
+			<h3 class="header">Despolitizar las empresas públicas</h3>
+			<div class="collapsable">Redefinir las funciones del Ministerio de Fomento y despolitizar los órganos de dirección de las grandes empresas públicas de Infraestructura: Renfe, Adif, Aena, Enaire.</div>
+			<h3 class="header">Más seguridad para las infraestructuras</h3>
+			<div class="collapsable">Reforzar las medidas de seguridad en todos los sectores de transporte, incorporando sistemas avanzados en líneas de alta velocidad ferroviaria, puertos y aeropuertos.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="energia" style="border-color:#f99033; color: #f99033" data-color="#f99033">
+							<div class="heading">
+								<div class="left"><a name="energia"></a>
+									<div class="pre-titulo" style="background: #f99033;" >Parte XIV</div>									<div class="content  "  >
+										<div class="titulo">Energía</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#f99033; color: #f99033"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Nuevo modelo energético</h3>
+			<div class="collapsable">Impulsar un Plan Estratégico de Transición Energética, que promueva un nuevo modelo energético basado en las energías renovables, el autoabastecimiento  y el ahorro energético.</div>
+			<h3 class="header">Protección del autoconsumo</h3>
+			<div class="collapsable">Eliminar cualquier traba al autoconsumo y suprimir el llamado "impuesto al sol".</div>
+			<h3 class="header">Bajar los costes eléctricos a Pymes y familias</h3>
+			<div class="collapsable">Modificar el sistema de precios de la energía para disminuir los altos costes eléctricos para pymes y familias.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="medio-ambiente" style="border-color:#049abe; color: #049abe" data-color="#049abe">
+							<div class="heading">
+								<div class="left"><a name="medio-ambiente"></a>
+									<div class="pre-titulo" style="background: #049abe;" >Parte XV</div>									<div class="content  "  >
+										<div class="titulo">Medio Ambiente</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#049abe; color: #049abe"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Nueva Secretaría de Estado de Medio Ambiente y Energía</h3>
+			<div class="collapsable">Crear una Secretaria de Estado de Medio Ambiente y Energía, que coordine todas las políticas públicas orientadas a promover un modelo de desarrollo sostenible.</div>
+			<h3 class="header">Nueva Ley de Cambio Climático</h3>
+			<div class="collapsable">Aprobar una Ley de Cambio Climático para regular de forma coherente y estable las políticas públicas que afectan el clima. Apoyar a escala nacional y europea una política ambiciosa de Economía Circular, que garantice una reducción del uso de recursos naturales.</div>
+			<h3 class="header">Apoyo a la Economía Circular</h3>
+			<div class="collapsable">Apoyar a escala nacional y europea una política ambiciosa de Economía Circular, que garantice una reducción del uso de recursos naturales.</div>
+			<h3 class="header">Responsabilidad subsidiaria de empresas contaminantes</h3>
+			<div class="collapsable">Impulsar leyes de Responsabilidad a Medio Ambiental de ámbito autonómico que delimiten la responsabilidad subsidiaria de las empresas que contaminan.</div>
+			<h3 class="header">Aumentar la protección a los animales</h3>
+			<div class="collapsable">Elaborar una nueva Ley de Protección Animal que incorpore una reforma del código civil de la figura legal del animal, aplicable al maltrato.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="seguridad-interior" style="border-color:#F9BB3C; color: #F9BB3C" data-color="#F9BB3C">
+							<div class="heading">
+								<div class="left"><a name="seguridad-interior"></a>
+									<div class="pre-titulo" style="background: #F9BB3C;" >Parte XVI</div>									<div class="content  "  >
+										<div class="titulo">Seguridad interior</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#F9BB3C; color: #F9BB3C"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Refuerzo de la lucha antiterrorista</h3>
+			<div class="collapsable">Reforzar y brindar todos los medios posibles a las Fuerzas y Cuerpos de Seguridad del Estado en la lucha contra el terrorismo.</div>
+			<h3 class="header">Nuevo Estatuto de la Víctima</h3>
+			<div class="collapsable">Impulsar la enmienda del Estatuto de la Víctima de modo que se concreten las especificidades propias de las víctimas del terrorismo y su especial consideración institucional.</div>
+			<h3 class="header">Reforma del sistema policial</h3>
+			<div class="collapsable">Elaborar una nueva Ley de Fuerzas y Cuerpos de Seguridad del Estado, con el objetivo de establecer con claridad la distribución de competencias de los distintos cuerpos policiales, permitiendo su adaptación a la situación actual y a los distintos retos y compromisos, nacionales e internacionales.</div>
+			<h3 class="header">Más eficiente despliegue policial en el territorio</h3>
+			<div class="collapsable">Reorganizar el actual despliegue territorial de cada uno de los cuerpos policiales del Estado, evitando duplicidades funcionales con los cuerpos autonómicos y locales, con objeto de optimizar la prevención y los tiempos de respuesta y mejorar la calidad de la atención al ciudadano y su percepción subjetiva de seguridad.</div>
+			<h3 class="header">Más eficiente coordinación policial</h3>
+			<div class="collapsable">Crear un procedimiento de coordinación de Seguridad Nacional Permanente, que defina los canales operativos de coordinación que garanticen una cooperación eficaz entre las FFCCSS del Estado. Promover la generación de una única base de datos policial, actualizada y gestionada por un único administrador responsable, para la prevención de la criminalidad a partir de su cruce con las bases de datos supraestatales, estatales, autonómicas y municipales.</div>
+			<h3 class="header">Mejores condiciones laborales para los funcionarios</h3>
+			<div class="collapsable">Promover un Acuerdo Marco que iguale los niveles salariales y las condiciones de trabajo y de conciliación, promoviendo la equidad y la igualdad en el seno de las Fuerzas y Cuerpos de Seguridad del Estado en base a marcos competenciales homologables entre ellos.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div><div class="propuesta has-content" data-propuesta-key="seguridad-defensa" style="border-color:#31BDA5; color: #31BDA5" data-color="#31BDA5">
+							<div class="heading">
+								<div class="left"><a name="seguridad-defensa"></a>
+									<div class="pre-titulo" style="background: #31BDA5;" >Parte XVII</div>									<div class="content  "  >
+										<div class="titulo">Seguridad y defensa</div>
+																															<a class="button" href="javascript:void(0);" style="border-color:#31BDA5; color: #31BDA5"><span>Mostrar información</span><span class="close-text">Ocultar información</span></a>
+																			</div>
+								</div>
+								<div class="right">
+																	</div>
+							</div>
+							<div class="content">
+								<div class="separator"></div>
+								<div class="content">
+											<div class="co-apply-generic-styles-t1">
+			<h3 class="header">Nueva Ley de la Defensa</h3>
+			<div class="collapsable">Impulsar una nueva Ley de la Defensa y actualizaremos la Directiva de Defensa Nacional y la Estrategia de Seguridad Nacional, consensuando sus objetivos con las principales formaciones políticas nacionales.</div>
+			<h3 class="header">Nueva Estrategia de Ciberseguridad</h3>
+			<div class="collapsable">Potenciar el desarrollo y las capacidades del Instituto Nacional de Ciberseguridad (INCIBE), bajo dependencia del Ministerio de Defensa, de modo congruente con las nuevas amenazas del escenario global.</div>
+			<h3 class="header">Fortalecimiento de la autoridad del JEMAD</h3>
+			<div class="collapsable">Modificar el procedimiento de elección del Jefe del Estado Mayor de la Defensa, mediante la ratificación por mayoría parlamentaria de todo candidato propuesto por el ejecutivo a través de la Comisión de Defensa. La duración en el desempeño del cargo pasará a ser de 5 años.</div>
+			<h3 class="header">Nueva Ley de la Carrera Militar</h3>
+			<div class="collapsable">Impulsar una reforma de la Ley de la Carrera Militar que garantice la promoción y progresión profesional de los integrantes de las FFAA, subsanando las disfunciones que crean los mecanismos subjetivos de evaluación para el ascenso. Integrar las actuales escalas de Tropa y Marinería en un sistema único de carrera militar, desapareciendo los compromisos temporales.</div>
+			<h3 class="header">Apoyo a las familias de los miembros de las FFAA</h3>
+			<div class="collapsable">Elaborar una ley de movilidad geográfica para ayudar a resolver las carencias que tiene el sistema actual de cambio de destino forzoso de los profesionales de las FFAA.</div>
+		</div>
+									</div>
+								<a href="/var/public/sections/page-programa-electoral-20d/programa-electoral.pdf?__v=147_0" target="_blank" class="download-button">Descargar programa completo</a>							</div>
+						</div></div></div>			</div>
+		</div></div><div class="basic--draw-page-footer">
+			<div style="height: 120px"></div>
+			<div class="contact-menu">
+			<div class="page-content-fixed-width-centered" >
+			<div class="container">
+								<div class="wrapper">
+					<ul>
+						<li class="contact-info">
+							<div class="logo"><div class="basic--draw-img both-exists" style="width:141px; height:22px;"><img width="141" height="22" src="/images/sections/header-logo/_locale.es/logo-ciudadanos-small.png?__v=147_0" class="non-retina" ><img width="141" height="22" src="/images/sections/header-logo/_locale.es/logo-ciudadanos-small-2x.png?__v=147_0" class="retina" ></div></div>
+							<p class="title">Sede Central</p>
+							<p class="address">C/ Balmes, 191<br/>08006 Barcelona</p>
+							<a href="/contacto" class="phone-contact">Contacto</a>
+							<ul class="social-networks">
+								<li><a href="https://twitter.com/CiudadanosCs" class="icon-twitter" target="_blank"></a></li>
+								<li><a href="http://www.facebook.com/pages/Ciudadanos-Partido-de-la-Ciudadania/74078667754" class="icon-facebook" target="_blank"></a></li>
+								<li><a href="http://albertrivera.info/" class="icon-blogger" target="_blank"></a></li>
+								<li><a href="https://www.youtube.com/ciudadanos" class="icon-youtube" target="_blank"></a></li>
+								<li><a href="https://www.linkedin.com/company/ciudadanos" class="icon-linkedin" target="_blank"></a></li>
+								<li><a href="https://upclose.me/Ciudadanos" class="icon-upclose" target="_blank"></a></li>
+							</ul>
+							<a href="https://www.confianzaonline.es/empresas/ciudadanos.html" target="_blank" class="sello-confianzaonline"></a>
+						</li>							<li class="menu">							<div class="menu-item">
+							<a  href="javascript:void(0);" >somos ciudadanos</a>								<ul>
+																	<li>							<div class="menu-item">
+							<a  href="/que-es-ciudadanos" >¿Qué es Ciudadanos?</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/equipo" >Equipo</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/transparencia" >Transparencia</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/cerca-de-ti" >Cerca de ti</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/europa" >C's Europa</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/organizacion" >Organización</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/origenes" >Orígenes</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/estatutos" >Estatutos</a>							</div>
+							</li>
+																</ul>							</div>
+							</li>							<li class="menu">							<div class="menu-item">
+							<a  href="javascript:void(0);" >actualidad</a>								<ul>
+																	<li>							<div class="menu-item">
+							<a  href="/prensa" >Notas de Prensa</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/noticias" >C's en los Medios</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/opinion" >Opinión</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/agenda" >Agenda</a>							</div>
+							</li>
+																</ul>							</div>
+							</li>							<li class="menu">							<div class="menu-item">
+							<a  href="/participa" >Participa</a>								<ul>
+																	<li>							<div class="menu-item">
+							<a  href="/afiliate" >Afíliate</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/hazte-simpatizante" >Hazte Simpatizante</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/red-ciudadana" >Red Ciudadana</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/cerca-de-ti" >Encuentra tu agrupación</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/donaciones" >Haz una donación</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a  href="/cs-te-escucha" >C's te escucha</a>								<ul>
+																	<li>							<div class="menu-item">
+							<a  href="/cs-te-escucha" >Café con Albert</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a target="_blank" href="javascript:void(0);" >Parlamento Abierto</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a target="_blank" href="https://twitter.com/ciudadanoscs" >Encuentro Twittero</a>							</div>
+							</li>
+																</ul>							</div>
+							</li>
+																</ul>							</div>
+							</li>							<li class="menu">							<div class="menu-item">
+							<a  href="/donaciones" >Colabora</a>							</div>
+							</li>						<li class="campaign-material">							<ul><li>							<div class="menu-item">
+							<a  href="javascript:void(0);" >campañas</a>								<ul>
+																	<li>							<div class="menu-item">
+							<a target="_blank" href="" >Mejor Unidos</a>							</div>
+							</li>
+																	<li>							<div class="menu-item">
+							<a target="_blank" href="" >Europeas</a>							</div>
+							</li>
+																</ul>							</div>
+							</li></ul>							<ul><li>							<div class="menu-item">
+							<a  href="javascript:void(0);" >material</a>								<ul>
+																	<li>							<div class="menu-item">
+							<a  href="/imagen-del-partido" >Imagen del Partido</a>							</div>
+							</li>
+																</ul>							</div>
+							</li></ul>						</li>
+					</ul>
+				</div>			</div>
+		</div>			</div>
+			<div class="legal">
+			<div class="page-content-fixed-width-centered" >
+			<div class="container">
+								<div class="wrapper">
+					<ul>
+						<li><a href="/legal/aviso-legal">Aviso Legal</a></li>
+						<li><a href="/legal/politica-de-privacidad">Política de privacidad</a></li>
+						<li><a href="/legal/politica-de-cookies">Política de cookies</a></li>
+					</ul>
+				</div>			</div>
+		</div>			</div>
+		</div>
+		<div class="basic--draw-page-footer-padding"></div>		</div><script type="text/javascript">					jQuery(function(){
+						document.getElementsByTagName( 'html' )[0].className += " mc-loaded";
+					});
+				</script></body>
+			</html>
