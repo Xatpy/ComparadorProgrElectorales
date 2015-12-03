@@ -311,62 +311,36 @@ table.equalDevide tr td { width:25%; }
 }
 
 
-#container4 {
-    clear:left;
-    float:left;
-    width:100%;
-    overflow:hidden;
-    background:#0BB2FF; /* column 4 background colour */
-}
-#container3 {
-    clear:left;
-    float:left;
-    width:100%;
-    position:relative;
-    right:25%;
-    background:#FD4848; /* column 3 background colour */
-}
 #container2 {
     clear:left;
     float:left;
     width:100%;
-    position:relative;
-    right:25%;
+    overflow:hidden;
     background:#F59F48; /* column 2 background colour */
 }
 #container1 {
     float:left;
     width:100%;
     position:relative;
-    right:25%;
+    right:50%;
     background:#97668B; /* column 1 background colour */
 }
-
 #col1 {
     float:left;
-    width:21%;
+    width:46%;
     position:relative;
-    left:77%;
+    left:52%;
     overflow:hidden;
 }
 #col2 {
     float:left;
-    width:21%;
+    width:46%;
     position:relative;
-    left:81%;
+    left:56%;
     overflow:hidden;
 }
-#col3 {
-    float:left;
-    width:21%;
-    position:relative;
-    left:85%;
-    overflow:hidden;
-}
-#col4 {
-    float:left;
-    width:21%;
-    position:relative;
-    left:89%;
-    overflow:hidden;
+
+.cellStyle {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;;
 }
