@@ -1,82 +1,81 @@
-EL NUEVO PROYECTO COMÚN PARA ESPAÑA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+"Nueva sección de derechos sociales en la Constitución",
+"Políticos sin privilegios",
+"Despolitización de la Justicia",
+"Organización territorial del Estado: leal, eficaz, ciudadana",
+"Una cartera de servicios común en toda España.",
+"Una administración más eficiente",
+"Una nueva ley electoral",
+"Europa y más Europa",
+"Reconciliación entre los españoles",
+"Contrato estable de igualdad de oportunidades",
+"Complemento Salarial Anual Garantizado",
+"Una Reforma fiscal a favor de la clase media",
+"Impulso para los autónomos",
+"Programa contra el Paro de larga duración",
+"Lucha contra el fraude",
+"Gratuidad de la enseñanza",
+"Independencia de los centros",
+"Un modelo plurilingüe en la escuela pública",
+"Un MIR docente: concursos de provisión y formación del profesorado",
+"Reforma universitaria",
+"Promover la cultura científica en España",
+"Aumento de la inversión en I+D",
+"Desarrollo de Centros de Investigación de Excelencia",
+"Fortalecimiento del Sistema Nacional de Salud",
+"Regulación de la muerte digna",
+"Regulación de la maternidad subrogada",
+"Derecho a la Vivienda",
+"Pensiones",
+"Política migratoria común europea",
+"Dependencia",
+"Un Pacto Nacional por la Racionalización de Horarios y la Conciliación Laboral.",
+"Nuevo esquema de baja por maternidad y paternidad",
+"Promoción del servicios de educación inicial",
+"Igualdad y lucha frente a la violencia contra las mujeres y la violencia intrafamiliar",
+"Protección a los denunciantes de casos de corrupción",
+"Imputados fuera de las listas electorales",
+"Los partidos responderán por la corrupción de sus cargos públicos",
+"Supresión de la cláusula suelo",
+"Mejorar el funcionamiento de los partidos políticos",
+"Más recursos materiales y humanos para la Justicia",
+"Fomento de la cultura desde la escuela",
+"Fomentar la industria audiovisual",
+"Consolidar la protección de la Propiedad Intelectual",
+"Protección del patrimonio",
+"Fortalecimiento del Instituto Cervantes",
+"Protección a los creadores",
+"Nueva ley de mecenazgo",
+"Una RTVE independiente y de calidad",
+"Promoción del Deporte para la salud ",
+"Apoyo al atleta de alta competencia",
+"Una carrera diplomática más profesional",
+"Consolidar la financiación para Cooperación y Desarrollo",
+"Participación política de los españoles en el exterior",
+"Política de Defensa Europea",
+"Política Fiscal Europea",
+"Mercado Laboral Europeo",
+"Gran Pacto Nacional por las Infraestructuras",
+"Infraestructuras prioritarias",
+"Vivienda Social",
+"Mercado Inmobiliario",
+"Despolitizar las empresas públicas",
+"Más seguridad para las infraestructuras",
+"Nuevo modelo energético",
+"Protección del autoconsumo",
+"Bajar los costes eléctricos a Pymes y familias",
+"Nueva Secretaría de Estado de Medio Ambiente y Energía",
+"Nueva Ley de Cambio Climático",
+"Apoyo a la Economía Circular",
+"Responsabilidad subsidiaria de empresas contaminantes",
+"Aumentar la protección a los animales",
+"Refuerzo de la lucha antiterrorista",
+"Nuevo Estatuto de la Víctima",
+"Reforma del sistema policial",
+"Más eficiente despliegue policial en el territorio",
+"Más eficiente coordinación policial",
+"Mejores condiciones laborales para los funcionarios",
+"Nueva Ley de la Defensa",
+"Nueva Estrategia de Ciberseguridad",
+"Fortalecimiento de la autoridad del JEMAD",
+"Nueva Ley de la Carrera Militar",
+"Apoyo a las familias de los miembros de las FFAA",

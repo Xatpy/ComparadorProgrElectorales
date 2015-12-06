@@ -15,78 +15,39 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <script src="code.js"></script>
     </head>
-    <script>
-        function voteUp(id)
-        {
-            document.getElementById(id).style.background="green";
-        }
 
-        function voteDown(id)
-        {
-            document.getElementById(id).style.background="red";
-        }
-
-        window.onload = function() {
-
-          var table = document.getElementById("tableCiudadanos");
-          // Create an empty <tr> element and add it to the 1st position of the table:
-        var row = table.insertRow(0);
-        row.className = "propuesta cellStyle";
-
-        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-
-        // Add some text to the new cells:
-        cell1.innerHTML = "erogación del Real Decreto 900 / 2015, de 9 de octubre, y aprobación de una normativa que permita el desarrollo del autoconsumo eléctrico";
-        cell1.className = "textoPropuesta";
-        cell2.innerHTML = "<button >👍</button> &nbsp <button >👎</button></span>";
-        cell2.className = "votos";
-        };
-    </script>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1>Comparador programas electorales<h1>
+        <h1>Comparador programas electorales 
+            <br /> 
+            Podemos vs Ciudadanos 
+        </h1>
 
         <h2>Descripción</h2>
 
-            <div id="container2">
-                <div id="container1">
-                    <div id="col1">     
-                        <h3>PODEMOS</h3>
+        <h3>Referencias programas electorales: &emsp;
+            <a href="http://unpaiscontigo.es/programa/" style="color:#97668B"><b>Podemos</b></a> &emsp;
+            <a href="https://www.ciudadanos-cs.org/nuestras-ideas" style="color:#F59F48"><b>Ciudadanos</b><a>
+        </h3>
 
-                        <table class="equalDevide" cellpadding="0" cellspacing="0" width="100%" border="0">
-
-                            <tr id="hola" class="propuesta cellStyle">
-                                <td class="textoPropuesta">Derogación del Real Decreto 900 / 2015, de 9 de octubre, y aprobación de una normativa que permita el desarrollo del autoconsumo eléctrico</td>
-                                <td class="votos"><button onclick="voteUp('hola')">👍</button> &nbsp <button onclick="voteDown('hola')">👎</button></span> </td>
-                            </tr>
-
-                            <tr id="hola" class="propuesta cellStyle">
-                                <td class="textoPropuesta">Puesta en marcha de fondos de inversión soberanos de carácter público</td>
-                                <td class="votos"><button onclick="voteUp('hola')">👍</button> &nbsp <button onclick="voteDown('hola')">👎</button></span> </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="col2">
-                        <h3>CIUDADANOS<h3>
-
-                        <table id="tableCiudadanos" class="equalDevide" cellpadding="0" cellspacing="0" width="100%" border="0">
-
-                        </table>
-
-                    </div>
+        <div id="container2">
+            <div id="container1">
+                <div id="col1">     
+                    <h3><strong>PODEMOS</strong></h3>
+                    <table id="tablePodemos" class="equalDevide" cellpadding="0" cellspacing="0" width="100%" border="0"></table>
+                </div>
+                <div id="col2">
+                    <h3><strong>CIUDADANOS</strong></h3>
+                    <table id="tableCiudadanos" class="equalDevide" cellpadding="0" cellspacing="0" width="100%" border="0"></table>
                 </div>
             </div>
-
-            </div>
-        </div>
-
-
+        </div>       
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
