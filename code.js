@@ -10,24 +10,6 @@ function voteDown(id)
 
 window.onload = function() {
 
-	if (0)
-	{
-		var table = document.getElementById("tableCiudadanos");
-		// Create an empty <tr> element and add it to the 1st position of the table:
-		var row = table.insertRow(0);
-		row.className = "propuesta cellStyle";
-
-		// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-
-		// Add some text to the new cells:
-		cell1.innerHTML = "erogación del Real Decreto 900 / 2015, de 9 de octubre, y aprobación de una normativa que permita el desarrollo del autoconsumo eléctrico";
-		cell1.className = "textoPropuesta";
-		cell2.innerHTML = "<button onclick=\"voteUp('hola')\">👍</button> &nbsp <button onclick='voteDown('hola')'>👎</button></span>";
-		cell2.className = "votos";
-	}
-
 	var table = document.getElementById("tablePodemos");  	
 	for (var i = 0; i < propuestasPodemos.length; ++i) {
 		var row = table.insertRow(0);

@@ -337,3 +337,9 @@ table.equalDevide tr td { width:25%; }
     border-bottom: 1px solid black;
     border-top: 1px solid black;;
 }
+
+#wrapper {width: 100%;}
+#main {margin-top: 10px;}
+#sideleft {float: left; width: 20%; }
+#sideright {float: right; width: 20%; }
+#content {}
