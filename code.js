@@ -1,11 +1,52 @@
-function voteUp(id)
-{
-    document.getElementById(id).style.background="green";
+var puntPodemos = {};
+var puntCiudadanos = {};
+
+var marcadorPodemos = 0;
+var marcadorCiudadanos = 0;
+
+function isVoteRegistered(partido, id, typeVote){
+	if (partido == "ciu") {
+		return puntCiudadanos[id] === typeVote;
+	} else {
+		return puntPodemos[id] === typeVote;
+	}
+}
+
+function updateMark(partido, typeVote){
+	if (partido === "ciu") {
+		marcadorCiudadanos += typeVote;
+		var contCiudadanos = document.getElementById("contCiudadanos").innerHTML;
+    	contPodemos.innerHTML = marcadorCiudadanos / Object.keys(puntCiudadanos).length;
+	} else {
+		marcadorPodemos += typeVote;
+		var finalResult = marcadorPodemos / Object.keys(puntPodemos).length;
+		document.getElementById("contPodemos").innerHTML = finalResult;
+	}
+}
+
+function getPartido(id) {
+	return id.substring(0,3);
+}
+
+function voteUp(id){
+	var partido = getPartido(id);
+	var typeVote = 1;
+	if (!isVoteRegistered(partido, id, typeVote))
+	{
+		updateMark(partido, typeVote);
+		document.getElementById(id).style.background="green";
+	}
 }
 
 function voteDown(id)
 {
-    document.getElementById(id).style.background="red";
+    var partido = getPartido(id);
+    var typeVote = -1;
+	if (!isVoteRegistered(partido, id, typeVote))
+	{
+		updateMark(partido,typeVote);
+		document.getElementById(id).style.background="red";
+	}
 }
 
 window.onload = function() {
@@ -24,13 +65,15 @@ window.onload = function() {
 		cell1.className = "textoPropuesta";
 		cell2.innerHTML = "<button onclick=\"voteUp('" + id + "')\">👍</button> &nbsp <button onclick=\"voteDown('" + id + "')\">👎</button></span>";
 		cell2.className = "votos";
+
+		puntPodemos[id] = "0";
 	}
 
 	var table = document.getElementById("tableCiudadanos");  	
 	for (var i = 0; i < propuestasCiudadanos.length; ++i) {
 		var row = table.insertRow(0);
 		row.className = "propuesta cellStyle";
-		id = "ciud" + i;
+		id = "ciu" + i;
 		row.id = id;
 
 		var cell1 = row.insertCell(0);
@@ -40,6 +83,8 @@ window.onload = function() {
 		cell1.className = "textoPropuesta";
 		cell2.innerHTML = "<button onclick=\"voteUp('" + id + "')\">👍</button> &nbsp <button onclick=\"voteDown('" + id + "')\">👎</button></span>";
 		cell2.className = "votos";
+
+		puntCiudadanos[id] = "0"
 	}
 };
 
