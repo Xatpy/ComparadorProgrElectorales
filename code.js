@@ -5,6 +5,7 @@ var marcadorPodemos = 0;
 var marcadorCiudadanos = 0;
 
 function isVoteRegistered(partido, id, typeVote){
+	debugger
 	if (partido == "ciu") {
 		return puntCiudadanos[id] === typeVote;
 	} else {
@@ -12,15 +13,34 @@ function isVoteRegistered(partido, id, typeVote){
 	}
 }
 
-function updateMark(partido, typeVote){
+function cutString(str){
+	str = str.toString();
+	if (str.length < 6)
+		return str;
+	return str.substring(0,5);
+}
+
+function updateMark(partido, id, typeVote){
 	if (partido === "ciu") {
+		puntCiudadanos[id] = typeVote;
+
 		marcadorCiudadanos += typeVote;
-		var contCiudadanos = document.getElementById("contCiudadanos").innerHTML;
-    	contPodemos.innerHTML = marcadorCiudadanos / Object.keys(puntCiudadanos).length;
+		if (marcadorCiudadanos >= 0) {
+			var finalResult = marcadorCiudadanos / Object.keys(puntCiudadanos).length;
+			document.getElementById("contCiudadanos").innerHTML = cutString(finalResult);
+		} else {
+			document.getElementById("contCiudadanos").innerHTML = "0.0";
+		}
 	} else {
+		puntPodemos[id] = typeVote;
+		debugger
 		marcadorPodemos += typeVote;
-		var finalResult = marcadorPodemos / Object.keys(puntPodemos).length;
-		document.getElementById("contPodemos").innerHTML = finalResult;
+		if (marcadorPodemos >= 0) {
+			var finalResult = marcadorPodemos / Object.keys(puntPodemos).length;
+			document.getElementById("contPodemos").innerHTML = cutString(finalResult);
+		} else {
+			document.getElementById("contPodemos").innerHTML = "0.0";
+		}
 	}
 }
 
@@ -33,7 +53,7 @@ function voteUp(id){
 	var typeVote = 1;
 	if (!isVoteRegistered(partido, id, typeVote))
 	{
-		updateMark(partido, typeVote);
+		updateMark(partido, id, typeVote);
 		document.getElementById(id).style.background="green";
 	}
 }
@@ -44,7 +64,7 @@ function voteDown(id)
     var typeVote = -1;
 	if (!isVoteRegistered(partido, id, typeVote))
 	{
-		updateMark(partido,typeVote);
+		updateMark(partido, id, typeVote);
 		document.getElementById(id).style.background="red";
 	}
 }
@@ -63,7 +83,7 @@ window.onload = function() {
 
 		cell1.innerHTML = propuestasPodemos[i];
 		cell1.className = "textoPropuesta";
-		cell2.innerHTML = "<button onclick=\"voteUp('" + id + "')\">👍</button> &nbsp <button onclick=\"voteDown('" + id + "')\">👎</button></span>";
+		cell2.innerHTML = "<button onclick=\"voteUp('" + id + "')\">👍</button> <button onclick=\"voteDown('" + id + "')\">👎</button></span>";
 		cell2.className = "votos";
 
 		puntPodemos[id] = "0";
@@ -81,7 +101,7 @@ window.onload = function() {
 
 		cell1.innerHTML = propuestasCiudadanos[i];
 		cell1.className = "textoPropuesta";
-		cell2.innerHTML = "<button onclick=\"voteUp('" + id + "')\">👍</button> &nbsp <button onclick=\"voteDown('" + id + "')\">👎</button></span>";
+		cell2.innerHTML = "<button onclick=\"voteUp('" + id + "')\">👍</button> <button onclick=\"voteDown('" + id + "')\">👎</button></span>";
 		cell2.className = "votos";
 
 		puntCiudadanos[id] = "0"
